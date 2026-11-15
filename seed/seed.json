@@ -449,7 +449,7 @@
           "year": "2026",
           "summary": "Sports parlay tracking product with automated bet-slip AI extraction powered by Cloudflare Workers AI.",
           "github_repo": "Rocktown-Labs/ppal",
-          "live_url": "https://parlaypal.app",
+          "live_url": "https://myparlaypal.com",
           "featured": false,
           "content": [
             {
@@ -528,7 +528,7 @@
           "year": "2026",
           "summary": "Coordinated home-services platform with an on-demand gig dispatch model, driver app, and Stripe preorders.",
           "github_repo": "Rocktown-Labs/callcastlecare",
-          "live_url": "https://callcastlecare.com",
+          "live_url": "https://castlecare-web.rocktown-labs.workers.dev",
           "featured": false,
           "content": [
             {

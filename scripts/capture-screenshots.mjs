@@ -50,6 +50,16 @@ const sites = [
 		altSlug: null,
 		url: "https://bigbrainshelf.com",
 	},
+	{
+		slug: "parlaypal",
+		altSlug: null,
+		url: "https://myparlaypal.com",
+	},
+	{
+		slug: "castlecare",
+		altSlug: null,
+		url: "https://castlecare-web.rocktown-labs.workers.dev",
+	},
 ];
 
 console.log("Setting viewport and media settings...");
