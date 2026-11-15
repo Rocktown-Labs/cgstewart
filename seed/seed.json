@@ -263,7 +263,11 @@
               ],
               "_key": "k0"
             }
-          ]
+          ],
+          "featured_image": {
+            "url": "/images/projects/soundkit.png",
+            "alt": "SoundKit Hero Screenshot"
+          }
         },
         "taxonomies": {
           "tag": [
@@ -300,7 +304,11 @@
               ],
               "_key": "k0"
             }
-          ]
+          ],
+          "featured_image": {
+            "url": "/images/projects/big-brain-shelf.png",
+            "alt": "Big Brain Shelf Hero Screenshot"
+          }
         },
         "taxonomies": {
           "tag": [
@@ -336,7 +344,11 @@
               ],
               "_key": "k0"
             }
-          ]
+          ],
+          "featured_image": {
+            "url": "/images/projects/quickcalai.png",
+            "alt": "QuickCalAI Hero Screenshot"
+          }
         },
         "taxonomies": {
           "tag": [
@@ -372,7 +384,11 @@
               ],
               "_key": "k0"
             }
-          ]
+          ],
+          "featured_image": {
+            "url": "/images/projects/gigstax.png",
+            "alt": "GigStax Hero Screenshot"
+          }
         },
         "taxonomies": {
           "tag": [
@@ -408,7 +424,11 @@
               ],
               "_key": "k0"
             }
-          ]
+          ],
+          "featured_image": {
+            "url": "/images/projects/rallycasts.png",
+            "alt": "RallyCasts Hero Screenshot"
+          }
         },
         "taxonomies": {
           "tag": [
@@ -444,7 +464,11 @@
               ],
               "_key": "k0"
             }
-          ]
+          ],
+          "featured_image": {
+            "url": "/images/projects/parlaypal.png",
+            "alt": "ParlayPal Hero Screenshot"
+          }
         },
         "taxonomies": {
           "tag": [
@@ -480,7 +504,11 @@
               ],
               "_key": "k0"
             }
-          ]
+          ],
+          "featured_image": {
+            "url": "/images/projects/bigspella.png",
+            "alt": "BigSpella Hero Screenshot"
+          }
         },
         "taxonomies": {
           "tag": [
@@ -515,7 +543,11 @@
               ],
               "_key": "k0"
             }
-          ]
+          ],
+          "featured_image": {
+            "url": "/images/projects/castlecare.png",
+            "alt": "CastleCare Hero Screenshot"
+          }
         },
         "taxonomies": {
           "tag": [
@@ -550,7 +582,11 @@
               ],
               "_key": "k0"
             }
-          ]
+          ],
+          "featured_image": {
+            "url": "/images/projects/deadpartymedia.png",
+            "alt": "Dead Party Media Hero Screenshot"
+          }
         },
         "taxonomies": {
           "tag": [
@@ -586,7 +622,11 @@
               ],
               "_key": "k0"
             }
-          ]
+          ],
+          "featured_image": {
+            "url": "/images/projects/rivercitymd.png",
+            "alt": "River City Mobile Detailing Hero Screenshot"
+          }
         },
         "taxonomies": {
           "tag": [
@@ -621,7 +661,11 @@
               ],
               "_key": "k0"
             }
-          ]
+          ],
+          "featured_image": {
+            "url": "/images/projects/sweettreats.png",
+            "alt": "Sweet Treats Hero Screenshot"
+          }
         },
         "taxonomies": {
           "tag": [
@@ -657,7 +701,11 @@
               ],
               "_key": "k0"
             }
-          ]
+          ],
+          "featured_image": {
+            "url": "/images/projects/reluxury.png",
+            "alt": "ReLuxury Hero Screenshot"
+          }
         },
         "taxonomies": {
           "tag": [

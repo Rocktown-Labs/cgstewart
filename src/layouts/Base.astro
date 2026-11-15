@@ -77,6 +77,9 @@ const isLoggedIn = Boolean(Astro.locals.user);
 		<title>{fullTitle}</title>
 		<EmDashHead page={pageCtx} />
 		<Font cssVariable="--font-heading" preload />
+		<link rel="icon" type="image/svg+xml" href="/icon.svg" />
+		<link rel="alternate icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-icon.png" />
 		<link
 			rel="alternate"
 			type="application/rss+xml"
@@ -101,7 +104,8 @@ const isLoggedIn = Boolean(Astro.locals.user);
 		<header class="site-header">
 			<div class="nav-container">
 				<a href="/" class="nav-brand">
-					<span>cgstewart</span><span class="brand-dot">.dev</span>
+					<img src="/icon.svg" alt="CG" class="nav-monogram" width="22" height="22" />
+					<span class="nav-title">cgstewart<span class="brand-dot">.dev</span></span>
 				</a>
 				
 				<nav class="nav-tabs" aria-label="Main Navigation">
