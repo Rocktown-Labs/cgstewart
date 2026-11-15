@@ -1,0 +1,132 @@
+---
+import { getEmDashCollection } from "emdash";
+import Base from "../../layouts/Base.astro";
+
+const { slug } = Astro.params;
+
+const postsResult = await getEmDashCollection("posts", {
+	limit: 100,
+});
+
+const post = (postsResult.entries || []).find((p) => p.slug === slug || p.id === slug);
+
+if (!post) {
+	return Astro.redirect("/writing");
+}
+
+// Convert portableText blocks to simple HTML paragraphs if available
+let contentText = "";
+if (Array.isArray(post.data.content)) {
+	contentText = post.data.content
+		.map((block: any) => {
+			if (block._type === "block" && block.children) {
+				return block.children.map((c: any) => c.text).join("");
+			}
+			return "";
+		})
+		.filter(Boolean)
+		.join("\n\n");
+} else if (typeof post.data.content === "string") {
+	contentText = post.data.content;
+}
+---
+
+<Base title={`${post.data.title} — cgstewart.dev`}>
+	<article class="post-detail-page">
+		<nav class="back-nav">
+			<a href="/writing" class="back-link">&larr; Back to all writing</a>
+		</nav>
+
+		<header class="post-header">
+			<div class="post-meta">
+				<span class="post-date">{post.data.published_date || "2026"}</span>
+				<span>·</span>
+				<span>Cameron Stewart</span>
+			</div>
+			<h1 class="post-title">
+				{post.data.title}<span class="brand-dot">.</span>
+			</h1>
+			{post.data.summary && <p class="post-lead">{post.data.summary}</p>}
+		</header>
+
+		<div class="post-body">
+			{
+				contentText ? (
+					contentText.split("\n\n").map((para: string) => (
+						<p>{para}</p>
+					))
+				) : (
+					<p class="placeholder-text">Draft in progress.</p>
+				)
+			}
+		</div>
+	</article>
+</Base>
+
+<style>
+	.post-detail-page {
+		max-width: 780px;
+		margin: 0 auto;
+		padding: 3rem 1.5rem 6rem;
+	}
+
+	.back-nav {
+		margin-bottom: 2.5rem;
+	}
+
+	.back-link {
+		font-size: 0.875rem;
+		color: var(--color-muted);
+		text-decoration: none;
+		font-weight: 500;
+	}
+
+	.back-link:hover {
+		color: var(--color-brand);
+	}
+
+	.post-header {
+		border-bottom: 1px solid var(--color-border);
+		padding-bottom: 2.5rem;
+		margin-bottom: 3rem;
+	}
+
+	.post-meta {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		font-size: 0.8125rem;
+		font-family: monospace;
+		color: var(--color-muted);
+		margin-bottom: 1rem;
+	}
+
+	.post-title {
+		font-family: var(--font-heading);
+		font-size: clamp(2rem, 5vw, 3.25rem);
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: -0.03em;
+		line-height: 1.15;
+		margin: 0 0 1.25rem 0;
+		color: var(--color-text);
+	}
+
+	.post-lead {
+		font-size: 1.125rem;
+		line-height: 1.6;
+		color: var(--color-muted);
+		margin: 0;
+	}
+
+	.post-body {
+		font-size: 1.0625rem;
+		line-height: 1.8;
+		color: var(--color-text);
+	}
+
+	.post-body p {
+		margin-bottom: 1.5rem;
+		color: color-mix(in srgb, var(--color-text) 90%, transparent);
+	}
+</style>

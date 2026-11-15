@@ -1,0 +1,1005 @@
+{
+  "$schema": "https://emdashcms.com/seed.schema.json",
+  "version": "1",
+  "meta": {
+    "name": "cgstewart.dev Portfolio",
+    "description": "Portfolio for Cameron Stewart - Full Stack Architect and Founder",
+    "author": "Cameron Stewart"
+  },
+  "settings": {
+    "title": "cgstewart.dev",
+    "tagline": "Full Stack Architect & Solo Founder"
+  },
+  "collections": [
+    {
+      "slug": "projects",
+      "label": "Projects",
+      "labelSingular": "Project",
+      "supports": [
+        "drafts",
+        "revisions",
+        "preview",
+        "search",
+        "seo"
+      ],
+      "urlPattern": "/work/{slug}",
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Title",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "category",
+          "label": "Category",
+          "type": "string",
+          "required": true
+        },
+        {
+          "slug": "client",
+          "label": "Client / Studio",
+          "type": "string"
+        },
+        {
+          "slug": "year",
+          "label": "Year",
+          "type": "string"
+        },
+        {
+          "slug": "summary",
+          "label": "Summary",
+          "type": "text",
+          "searchable": true
+        },
+        {
+          "slug": "github_repo",
+          "label": "GitHub Repo",
+          "type": "string"
+        },
+        {
+          "slug": "live_url",
+          "label": "Live URL",
+          "type": "string"
+        },
+        {
+          "slug": "featured",
+          "label": "Featured",
+          "type": "boolean"
+        },
+        {
+          "slug": "featured_image",
+          "label": "Featured Image",
+          "type": "image"
+        },
+        {
+          "slug": "content",
+          "label": "Content",
+          "type": "portableText",
+          "searchable": true
+        }
+      ]
+    },
+    {
+      "slug": "posts",
+      "label": "Writing",
+      "labelSingular": "Post",
+      "supports": [
+        "drafts",
+        "revisions",
+        "preview",
+        "search",
+        "seo"
+      ],
+      "urlPattern": "/writing/{slug}",
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Title",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "summary",
+          "label": "Summary",
+          "type": "text",
+          "searchable": true
+        },
+        {
+          "slug": "published_date",
+          "label": "Published Date",
+          "type": "string"
+        },
+        {
+          "slug": "content",
+          "label": "Content",
+          "type": "portableText",
+          "searchable": true
+        }
+      ]
+    },
+    {
+      "slug": "technologies",
+      "label": "Technologies",
+      "labelSingular": "Technology",
+      "supports": [
+        "drafts"
+      ],
+      "fields": [
+        {
+          "slug": "name",
+          "label": "Name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "slug": "category",
+          "label": "Category",
+          "type": "string",
+          "required": true
+        },
+        {
+          "slug": "icon",
+          "label": "Icon",
+          "type": "string"
+        },
+        {
+          "slug": "order",
+          "label": "Order",
+          "type": "number"
+        }
+      ]
+    }
+  ],
+  "taxonomies": [
+    {
+      "name": "tag",
+      "label": "Tags",
+      "labelSingular": "Tag",
+      "hierarchical": false,
+      "collections": [
+        "projects",
+        "posts"
+      ],
+      "terms": [
+        {
+          "slug": "typescript",
+          "label": "TypeScript"
+        },
+        {
+          "slug": "react",
+          "label": "React"
+        },
+        {
+          "slug": "csharp",
+          "label": "C#"
+        },
+        {
+          "slug": "dotnet",
+          "label": ".NET"
+        },
+        {
+          "slug": "cloudflare",
+          "label": "Cloudflare"
+        },
+        {
+          "slug": "aws",
+          "label": "AWS"
+        },
+        {
+          "slug": "alchemy",
+          "label": "Alchemy"
+        },
+        {
+          "slug": "d1",
+          "label": "Cloudflare D1"
+        },
+        {
+          "slug": "ai",
+          "label": "AI"
+        },
+        {
+          "slug": "full-stack",
+          "label": "Full Stack"
+        }
+      ]
+    }
+  ],
+  "menus": [
+    {
+      "name": "primary",
+      "label": "Primary Navigation",
+      "items": [
+        {
+          "type": "custom",
+          "label": "About",
+          "url": "/#about"
+        },
+        {
+          "type": "custom",
+          "label": "Work",
+          "url": "/work"
+        },
+        {
+          "type": "custom",
+          "label": "Writing",
+          "url": "/writing"
+        },
+        {
+          "type": "custom",
+          "label": "Resume",
+          "url": "/resume"
+        }
+      ]
+    }
+  ],
+  "content": {
+    "projects": [
+      {
+        "id": "soundkit",
+        "slug": "soundkit",
+        "status": "published",
+        "data": {
+          "title": "SoundKit",
+          "category": "studio",
+          "client": "Rocktown Labs",
+          "year": "2026",
+          "summary": "Creator-first music platform combining an audio marketplace with live collaborative beat battles, listening parties, and Stripe Connect payouts.",
+          "github_repo": "Rocktown-Labs/mysoundkit",
+          "live_url": "https://mysoundkit.com",
+          "featured": true,
+          "content": [
+            {
+              "_type": "block",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "text": "SoundKit is a creator-first music platform combining an audio marketplace with live collaborative sessions.",
+                  "_key": "k1"
+                }
+              ],
+              "_key": "k0"
+            }
+          ]
+        },
+        "taxonomies": {
+          "tag": [
+            "typescript",
+            "react",
+            "cloudflare",
+            "full-stack"
+          ]
+        }
+      },
+      {
+        "id": "big-brain-shelf",
+        "slug": "big-brain-shelf",
+        "status": "published",
+        "data": {
+          "title": "Big Brain Shelf",
+          "category": "studio",
+          "client": "Rocktown Labs",
+          "year": "2026",
+          "summary": "A children's book store and multi-agent AI book production factory running on Astro and Cloudflare Workers.",
+          "github_repo": "Rocktown-Labs/bigbrainshelf",
+          "live_url": "https://bigbrainshelf.com",
+          "featured": true,
+          "content": [
+            {
+              "_type": "block",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "text": "Full commerce loop with real-time Shippo shipping, subscriptions, and an AI generation factory.",
+                  "_key": "k1"
+                }
+              ],
+              "_key": "k0"
+            }
+          ]
+        },
+        "taxonomies": {
+          "tag": [
+            "cloudflare",
+            "ai",
+            "full-stack"
+          ]
+        }
+      },
+      {
+        "id": "quickcalai",
+        "slug": "quickcalai",
+        "status": "published",
+        "data": {
+          "title": "QuickCalAI",
+          "category": "studio",
+          "client": "Rocktown Labs",
+          "year": "2026",
+          "summary": "AI-powered calendar automation tool converting photos, PDFs, and text into calendar (.ics) events for people and agents.",
+          "github_repo": "Rocktown-Labs/quickcal-cf",
+          "live_url": "https://www.quickcalai.com",
+          "featured": true,
+          "content": [
+            {
+              "_type": "block",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "text": "Subscription SaaS that converts photos, PDFs, pasted text, URLs, and JSON into .ics calendar files.",
+                  "_key": "k1"
+                }
+              ],
+              "_key": "k0"
+            }
+          ]
+        },
+        "taxonomies": {
+          "tag": [
+            "ai",
+            "cloudflare",
+            "typescript"
+          ]
+        }
+      },
+      {
+        "id": "gigstax",
+        "slug": "gigstax",
+        "status": "published",
+        "data": {
+          "title": "GigStax",
+          "category": "studio",
+          "client": "Rocktown Labs",
+          "year": "2026",
+          "summary": "Finance operating tool for gig workers featuring durable receipt and screenshot AI extraction on Cloudflare Workflows.",
+          "github_repo": "Rocktown-Labs/gigstaxcf",
+          "live_url": "https://gigstax.com",
+          "featured": true,
+          "content": [
+            {
+              "_type": "block",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "text": "Durable AI extraction pipeline on Cloudflare Workflows pulling structured data with Gemini models.",
+                  "_key": "k1"
+                }
+              ],
+              "_key": "k0"
+            }
+          ]
+        },
+        "taxonomies": {
+          "tag": [
+            "cloudflare",
+            "ai",
+            "full-stack"
+          ]
+        }
+      },
+      {
+        "id": "rallycasts",
+        "slug": "rallycasts",
+        "status": "published",
+        "data": {
+          "title": "RallyCasts",
+          "category": "studio",
+          "client": "Rocktown Labs",
+          "year": "2026",
+          "summary": "Pickleball media and community platform with tournament bracket management, player discovery, and live streaming.",
+          "github_repo": "Rocktown-Labs/rallycasts",
+          "live_url": "https://rallycasts.com",
+          "featured": false,
+          "content": [
+            {
+              "_type": "block",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "text": "Pickleball media platform with live streaming, player matching, and tournaments with Stripe Connect.",
+                  "_key": "k1"
+                }
+              ],
+              "_key": "k0"
+            }
+          ]
+        },
+        "taxonomies": {
+          "tag": [
+            "typescript",
+            "cloudflare",
+            "d1"
+          ]
+        }
+      },
+      {
+        "id": "parlaypal",
+        "slug": "parlaypal",
+        "status": "published",
+        "data": {
+          "title": "ParlayPal",
+          "category": "studio",
+          "client": "Rocktown Labs",
+          "year": "2026",
+          "summary": "Sports parlay tracking product with automated bet-slip AI extraction powered by Cloudflare Workers AI.",
+          "github_repo": "Rocktown-Labs/ppal",
+          "live_url": "https://parlaypal.app",
+          "featured": false,
+          "content": [
+            {
+              "_type": "block",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "text": "Sports data polling with deterministic settlement logic and bet slip extraction using Workers AI.",
+                  "_key": "k1"
+                }
+              ],
+              "_key": "k0"
+            }
+          ]
+        },
+        "taxonomies": {
+          "tag": [
+            "cloudflare",
+            "ai",
+            "typescript"
+          ]
+        }
+      },
+      {
+        "id": "bigspella",
+        "slug": "bigspella",
+        "status": "published",
+        "data": {
+          "title": "BigSpella",
+          "category": "studio",
+          "client": "Rocktown Labs",
+          "year": "2026",
+          "summary": "Multiplayer competitive spelling game with regional lobbies, 256-player brackets, and Workers AI Whisper voice transcription.",
+          "github_repo": "Rocktown-Labs/bigspella",
+          "live_url": "https://bigspella.com",
+          "featured": false,
+          "content": [
+            {
+              "_type": "block",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "text": "Durable Objects hold lobby and tournament state; voice answers are transcribed with Workers AI Whisper.",
+                  "_key": "k1"
+                }
+              ],
+              "_key": "k0"
+            }
+          ]
+        },
+        "taxonomies": {
+          "tag": [
+            "cloudflare",
+            "ai"
+          ]
+        }
+      },
+      {
+        "id": "castlecare",
+        "slug": "castlecare",
+        "status": "published",
+        "data": {
+          "title": "CastleCare",
+          "category": "studio",
+          "client": "Rocktown Labs",
+          "year": "2026",
+          "summary": "Coordinated home-services platform with an on-demand gig dispatch model, driver app, and Stripe preorders.",
+          "github_repo": "Rocktown-Labs/callcastlecare",
+          "live_url": "https://callcastlecare.com",
+          "featured": false,
+          "content": [
+            {
+              "_type": "block",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "text": "Home services dispatch platform with driver workflows and Stripe payments.",
+                  "_key": "k1"
+                }
+              ],
+              "_key": "k0"
+            }
+          ]
+        },
+        "taxonomies": {
+          "tag": [
+            "typescript",
+            "full-stack"
+          ]
+        }
+      },
+      {
+        "id": "deadpartymedia",
+        "slug": "deadpartymedia",
+        "status": "published",
+        "data": {
+          "title": "Dead Party Media",
+          "category": "client",
+          "client": "Dead Party Media",
+          "year": "2024–Present",
+          "summary": "Next.js 16 monorepo powering a media company and the Arkansas Music Awards: web magazine, arts portal, and Expo mobile app.",
+          "github_repo": "Rocktown-Labs/deadpartymedia",
+          "live_url": "https://deadpartymedia.com",
+          "featured": true,
+          "content": [
+            {
+              "_type": "block",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "text": "Multi-publication platform supporting 20+ live productions and the Arkansas Music Awards.",
+                  "_key": "k1"
+                }
+              ],
+              "_key": "k0"
+            }
+          ]
+        },
+        "taxonomies": {
+          "tag": [
+            "typescript",
+            "react",
+            "full-stack"
+          ]
+        }
+      },
+      {
+        "id": "rivercitymd",
+        "slug": "rivercitymd",
+        "status": "published",
+        "data": {
+          "title": "River City Mobile Detailing",
+          "category": "client",
+          "client": "River City Mobile Detailing",
+          "year": "2024–Present",
+          "summary": "Complete business operating system and booking portal for a Central Arkansas mobile detailing business with 500+ customers.",
+          "github_repo": "Rocktown-Labs/rivercitymd",
+          "live_url": "https://rivercitymd.com",
+          "featured": true,
+          "content": [
+            {
+              "_type": "block",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "text": "Operating system featuring no-login deposit checkout, customer portal, and revenue analytics.",
+                  "_key": "k1"
+                }
+              ],
+              "_key": "k0"
+            }
+          ]
+        },
+        "taxonomies": {
+          "tag": [
+            "typescript",
+            "full-stack"
+          ]
+        }
+      },
+      {
+        "id": "sweettreats",
+        "slug": "sweettreats",
+        "status": "published",
+        "data": {
+          "title": "Sweet Treats",
+          "category": "client",
+          "client": "Sweet Treats",
+          "year": "2026",
+          "summary": "Modern sweets commerce platform built on TanStack Start + Cloudflare D1 with Shippo USPS shipping and outbox email pipelines.",
+          "github_repo": "Rocktown-Labs/sweettreats",
+          "live_url": "https://sweettreats.shop",
+          "featured": true,
+          "content": [
+            {
+              "_type": "block",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "text": "Shippo USPS shipping, multi-location pickup, and transactional email pipeline over Cloudflare Queues.",
+                  "_key": "k1"
+                }
+              ],
+              "_key": "k0"
+            }
+          ]
+        },
+        "taxonomies": {
+          "tag": [
+            "cloudflare",
+            "d1",
+            "alchemy"
+          ]
+        }
+      },
+      {
+        "id": "reluxury",
+        "slug": "reluxury",
+        "status": "published",
+        "data": {
+          "title": "ReLuxury",
+          "category": "client",
+          "client": "ReLuxury Consignment",
+          "year": "2026",
+          "summary": "Luxury consignment operations platform with staff role-based access, consignment intake loop, and inventory workflows.",
+          "github_repo": "Rocktown-Labs/reluxury",
+          "live_url": "https://reluxury.app",
+          "featured": false,
+          "content": [
+            {
+              "_type": "block",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "text": "Consignment intake, review, shipping labels, and staff inventory operations on Cloudflare.",
+                  "_key": "k1"
+                }
+              ],
+              "_key": "k0"
+            }
+          ]
+        },
+        "taxonomies": {
+          "tag": [
+            "cloudflare",
+            "alchemy",
+            "typescript"
+          ]
+        }
+      }
+    ],
+    "posts": [
+      {
+        "id": "how-i-fit-django-into-a-turborepo-without-fighting-it",
+        "slug": "how-i-fit-django-into-a-turborepo-without-fighting-it",
+        "status": "published",
+        "data": {
+          "title": "How I Fit Django Into a Turborepo Without Fighting It",
+          "published_date": "2026-01-10",
+          "summary": "When people talk about Turborepo, most examples assume you are adding another JavaScript app. Here is how I brought Django in cleanly.",
+          "content": [
+            {
+              "_type": "block",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "text": "When people talk about Turborepo, most examples assume you are adding another JavaScript app. That was not my situation. I needed to bring a Django backend into the same repo as a Next.js web app and a React Native mobile app. Once I used it correctly, integrating Django stopped feeling like a workaround and started feeling intentional.",
+                  "_key": "k1"
+                }
+              ],
+              "_key": "k0"
+            }
+          ]
+        },
+        "taxonomies": {
+          "tag": [
+            "full-stack"
+          ]
+        }
+      },
+      {
+        "id": "why-i-switched-my-django-project-to-uv-and-never-looked-back",
+        "slug": "why-i-switched-my-django-project-to-uv-and-never-looked-back",
+        "status": "published",
+        "data": {
+          "title": "Why I Switched My Django Project to uv and Never Looked Back",
+          "published_date": "2026-01-10",
+          "summary": "Python dependency management has always felt heavier than it needs to be. Fast installs, deterministic CI pipelines, and instant builds with uv.",
+          "content": [
+            {
+              "_type": "block",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "text": "Python dependency management has always felt heavier than it needs to be. Installs are slow, CI pipelines are fragile, and Docker builds tend to break. Here is why uv changed everything.",
+                  "_key": "k1"
+                }
+              ],
+              "_key": "k0"
+            }
+          ]
+        },
+        "taxonomies": {
+          "tag": [
+            "full-stack"
+          ]
+        }
+      },
+      {
+        "id": "sunsetting-scoopy-jobs",
+        "slug": "sunsetting-scoopy-jobs",
+        "status": "draft",
+        "data": {
+          "title": "Sunsetting Scoopy Jobs: Lessons in Tech Job Intelligence",
+          "published_date": "2026-11-15",
+          "summary": "Reflections on building and operating scoopyjobs.com, and why we are focusing our studio efforts on core Rocktown Labs products.",
+          "content": [
+            {
+              "_type": "block",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "text": "Today we are officially sunsetting scoopyjobs.com. Here is what we learned building structured job intelligence for tech careers and what comes next.",
+                  "_key": "k1"
+                }
+              ],
+              "_key": "k0"
+            }
+          ]
+        },
+        "taxonomies": {
+          "tag": [
+            "full-stack"
+          ]
+        }
+      }
+    ],
+    "technologies": [
+      {
+        "id": "csharp",
+        "slug": "csharp",
+        "status": "published",
+        "data": {
+          "name": "C#",
+          "category": "Languages & Frameworks",
+          "icon": "csharp",
+          "order": 1
+        }
+      },
+      {
+        "id": "dotnet",
+        "slug": "dotnet",
+        "status": "published",
+        "data": {
+          "name": ".NET",
+          "category": "Languages & Frameworks",
+          "icon": "dotnet",
+          "order": 2
+        }
+      },
+      {
+        "id": "typescript",
+        "slug": "typescript",
+        "status": "published",
+        "data": {
+          "name": "TypeScript",
+          "category": "Languages & Frameworks",
+          "icon": "TypeScript",
+          "order": 3
+        }
+      },
+      {
+        "id": "react",
+        "slug": "react",
+        "status": "published",
+        "data": {
+          "name": "React",
+          "category": "Languages & Frameworks",
+          "icon": "ReactLight",
+          "order": 4
+        }
+      },
+      {
+        "id": "nextjs",
+        "slug": "nextjs",
+        "status": "published",
+        "data": {
+          "name": "Next.js",
+          "category": "Languages & Frameworks",
+          "icon": "Nextjs",
+          "order": 5
+        }
+      },
+      {
+        "id": "python",
+        "slug": "python",
+        "status": "published",
+        "data": {
+          "name": "Python",
+          "category": "Languages & Frameworks",
+          "icon": "Python",
+          "order": 6
+        }
+      },
+      {
+        "id": "nodejs",
+        "slug": "nodejs",
+        "status": "published",
+        "data": {
+          "name": "Node.js",
+          "category": "Languages & Frameworks",
+          "icon": "Nodejs",
+          "order": 7
+        }
+      },
+      {
+        "id": "cloudflare",
+        "slug": "cloudflare",
+        "status": "published",
+        "data": {
+          "name": "Cloudflare (Workers, D1, R2, Queues)",
+          "category": "Cloud & Infrastructure",
+          "icon": "Cloudflare",
+          "order": 10
+        }
+      },
+      {
+        "id": "alchemy",
+        "slug": "alchemy",
+        "status": "published",
+        "data": {
+          "name": "Alchemy",
+          "category": "Cloud & Infrastructure",
+          "icon": "Code",
+          "order": 11
+        }
+      },
+      {
+        "id": "aws",
+        "slug": "aws",
+        "status": "published",
+        "data": {
+          "name": "AWS (Lambda, CloudFront, S3, ECS)",
+          "category": "Cloud & Infrastructure",
+          "icon": "AmazonWebServicesDark",
+          "order": 12
+        }
+      },
+      {
+        "id": "docker",
+        "slug": "docker",
+        "status": "published",
+        "data": {
+          "name": "Docker",
+          "category": "Cloud & Infrastructure",
+          "icon": "Docker",
+          "order": 13
+        }
+      },
+      {
+        "id": "vercel",
+        "slug": "vercel",
+        "status": "published",
+        "data": {
+          "name": "Vercel",
+          "category": "Cloud & Infrastructure",
+          "icon": "VercelDark",
+          "order": 14
+        }
+      },
+      {
+        "id": "d1",
+        "slug": "d1",
+        "status": "published",
+        "data": {
+          "name": "Cloudflare D1 (SQLite)",
+          "category": "Databases",
+          "icon": "SQLite",
+          "order": 20
+        }
+      },
+      {
+        "id": "postgresql",
+        "slug": "postgresql",
+        "status": "published",
+        "data": {
+          "name": "PostgreSQL (Neon, PlanetScale, Hyperdrive)",
+          "category": "Databases",
+          "icon": "PostgreSQL",
+          "order": 21
+        }
+      },
+      {
+        "id": "redis",
+        "slug": "redis",
+        "status": "published",
+        "data": {
+          "name": "Redis",
+          "category": "Databases",
+          "icon": "Redis",
+          "order": 22
+        }
+      },
+      {
+        "id": "convex",
+        "slug": "convex",
+        "status": "published",
+        "data": {
+          "name": "Convex",
+          "category": "Databases",
+          "icon": "Convex",
+          "order": 23
+        }
+      },
+      {
+        "id": "cursor",
+        "slug": "cursor",
+        "status": "published",
+        "data": {
+          "name": "Cursor & Codex",
+          "category": "AI & Engineering Tools",
+          "icon": "Code",
+          "order": 30
+        }
+      },
+      {
+        "id": "posthog",
+        "slug": "posthog",
+        "status": "published",
+        "data": {
+          "name": "PostHog",
+          "category": "AI & Engineering Tools",
+          "icon": "PostHog",
+          "order": 31
+        }
+      },
+      {
+        "id": "sentry",
+        "slug": "sentry",
+        "status": "published",
+        "data": {
+          "name": "Sentry",
+          "category": "AI & Engineering Tools",
+          "icon": "Sentry",
+          "order": 32
+        }
+      },
+      {
+        "id": "tanstack",
+        "slug": "tanstack",
+        "status": "published",
+        "data": {
+          "name": "TanStack Query",
+          "category": "AI & Engineering Tools",
+          "icon": "TanStack",
+          "order": 33
+        }
+      },
+      {
+        "id": "zod",
+        "slug": "zod",
+        "status": "published",
+        "data": {
+          "name": "Zod",
+          "category": "AI & Engineering Tools",
+          "icon": "Zod",
+          "order": 34
+        }
+      },
+      {
+        "id": "stripe",
+        "slug": "stripe",
+        "status": "published",
+        "data": {
+          "name": "Stripe (Connect, Webhooks, Checkout)",
+          "category": "AI & Engineering Tools",
+          "icon": "Stripe",
+          "order": 35
+        }
+      }
+    ]
+  }
+}

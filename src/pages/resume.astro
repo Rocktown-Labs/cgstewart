@@ -1,0 +1,455 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="Resume — Cameron Stewart">
+	<div class="resume-container">
+		<!-- Top Bar -->
+		<div class="resume-topbar">
+			<a href="/" class="back-link">&larr; Back to Home</a>
+			<a 
+				href="/Cameron-Stewart-Resume.pdf" 
+				download="Cameron-Stewart-Resume.pdf"
+				class="download-btn"
+			>
+				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+					<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+					<polyline points="7 10 12 15 17 10"></polyline>
+					<line x1="12" y1="15" x2="12" y2="3"></line>
+				</svg>
+				Download PDF
+			</a>
+		</div>
+
+		<!-- Resume Header -->
+		<header class="resume-header">
+			<div>
+				<h1 class="candidate-name">
+					Cameron Stewart<span class="brand-dot">.</span>
+				</h1>
+				<p class="candidate-title">
+					<span class="live-indicator"></span>
+					Full Stack Software Engineer & Edge Architect
+				</p>
+			</div>
+			<div class="contact-meta">
+				<span>Searcy, Arkansas</span>
+				<span>·</span>
+				<a href="mailto:cg@rocktownlabs.com">cg@rocktownlabs.com</a>
+				<span>·</span>
+				<a href="https://github.com/cgRGM" target="_blank" rel="noopener noreferrer">github.com/cgRGM</a>
+			</div>
+		</header>
+
+		<!-- Executive Summary -->
+		<section class="resume-section">
+			<h2 class="section-title">
+				<span>Summary</span>
+				<span class="title-line"></span>
+			</h2>
+			<p class="summary-text">
+				Full stack software engineer with 5+ years of experience designing, architecting, and operating scalable consumer platforms, business operating systems, and AI-driven production pipelines. Solo founder of Rocktown Labs (34 repositories). Deep specialization in TypeScript, C#/.NET, Cloudflare edge compute (Workers, D1, R2, Queues, Workflows), and AWS infrastructure. Known for PR-driven, agent-assisted high-velocity delivery with strict production correctness: payment reconciliation, transactional outboxes, and zero-loss database migrations.
+			</p>
+		</section>
+
+		<!-- Technical Skills -->
+		<section class="resume-section">
+			<h2 class="section-title">
+				<span>Technical Skills</span>
+				<span class="title-line"></span>
+			</h2>
+			<div class="skills-grid">
+				<div class="skill-group">
+					<h3 class="skill-heading">Languages & Runtimes</h3>
+					<p class="skill-list">C#, .NET, TypeScript, JavaScript, Python, SQL, Node.js, Bun</p>
+				</div>
+				<div class="skill-group">
+					<h3 class="skill-heading">Edge & Cloud Infrastructure</h3>
+					<p class="skill-list">Cloudflare (Workers, D1, R2, DO, Queues, Workflows), Alchemy, AWS (Lambda, API Gateway, CloudFront, S3, ECS), Docker, Vercel</p>
+				</div>
+				<div class="skill-group">
+					<h3 class="skill-heading">Databases & Storage</h3>
+					<p class="skill-list">Cloudflare D1 (SQLite), PostgreSQL (Neon, PlanetScale, Hyperdrive), Redis, SQL Server, Convex</p>
+				</div>
+				<div class="skill-group">
+					<h3 class="skill-heading">Frontend & Frameworks</h3>
+					<p class="skill-list">React, Next.js, TanStack Start, React Native (Expo), Astro, Hono, Drizzle ORM, Tailwind CSS, shadcn/ui</p>
+				</div>
+				<div class="skill-group">
+					<h3 class="skill-heading">Commerce & AI Systems</h3>
+					<p class="skill-list">Stripe (Connect, Custom Payouts, Webhooks), Gemini Vision API, Workers AI (Whisper, Gemma), Polar, Shippo, Resend</p>
+				</div>
+				<div class="skill-group">
+					<h3 class="skill-heading">DevOps & Correctness</h3>
+					<p class="skill-list">GitHub Actions CI/CD, Oxlint, Turborepo, Idempotency pipelines, Transactional outbox patterns, Sentry, PostHog</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Work Experience -->
+		<section class="resume-section">
+			<h2 class="section-title">
+				<span>Professional Experience</span>
+				<span class="title-line"></span>
+			</h2>
+
+			<div class="experience-list">
+				<!-- Rocktown Labs -->
+				<article class="exp-item">
+					<div class="exp-header">
+						<div>
+							<h3 class="exp-role">Founder & Software Engineer</h3>
+							<h4 class="exp-company">Rocktown Labs</h4>
+						</div>
+						<span class="exp-date">Jan 2023 – Present · Searcy, AR (Remote)</span>
+					</div>
+					<ul class="exp-bullets">
+						<li>Architect, deploy, and operate 34 repositories across live consumer products, multi-agent AI tooling, and business infrastructure with PR-driven automated workflows.</li>
+						<li>Built <strong>SoundKit</strong> (500+ PRs): creator-first music platform with Stripe Connect creator payouts, Cloudflare Durable Objects live audio rooms, Hyperdrive-pooled PostgreSQL, and WebCodecs playback.</li>
+						<li>Engineered <strong>Big Brain Shelf</strong>: children’s bookstore and multi-agent AI book generation factory running on Astro + Cloudflare Workers with automated vision QC judges and Shippo fulfillment.</li>
+						<li>Created <strong>QuickCalAI</strong>: subscription calendar extraction service with a custom Model Context Protocol (MCP) server exposing tools to external AI agents.</li>
+						<li>Developed <strong>GigStax</strong>: gig economy tax tool with Cloudflare Workflows, Gemini vision extraction, and Polar billing.</li>
+					</ul>
+				</article>
+
+				<!-- Dead Party Media -->
+				<article class="exp-item">
+					<div class="exp-header">
+						<div>
+							<h3 class="exp-role">Full Stack Developer</h3>
+							<h4 class="exp-company">Dead Party Media & Arkansas Music Awards</h4>
+						</div>
+						<span class="exp-date">Jan 2024 – Present · Contract</span>
+					</div>
+					<ul class="exp-bullets">
+						<li>Architect and maintain a Next.js 16 Turborepo monorepo and Expo mobile app powering an arts publication and live events ecosystem.</li>
+						<li>Built high-throughput backend APIs with Drizzle over Neon Postgres, Clerk role-based auth, and Stripe ticketing supporting 20+ live productions.</li>
+						<li>Implemented multi-publication editorial permission governance for writers, editors, and venue administrators.</li>
+					</ul>
+				</article>
+
+				<!-- Fathom Realty -->
+				<article class="exp-item">
+					<div class="exp-header">
+						<div>
+							<h3 class="exp-role">Realtor & Software Automation Developer</h3>
+							<h4 class="exp-company">Fathom Realty</h4>
+						</div>
+						<span class="exp-date">Aug 2021 – Jan 2023 · Contract</span>
+					</div>
+					<ul class="exp-bullets">
+						<li>Built custom lead-generation scrapers and data aggregation pipelines for Realtor.com data across Arkansas, Missouri, and Louisiana.</li>
+						<li>Constructed internal recruiting dashboards using Next.js and React, automating broker outreach and prospect management.</li>
+					</ul>
+				</article>
+
+				<!-- ATA International -->
+				<article class="exp-item">
+					<div class="exp-header">
+						<div>
+							<h3 class="exp-role">Web Developer & Software Administrator</h3>
+							<h4 class="exp-company">ATA International</h4>
+						</div>
+						<span class="exp-date">Oct 2020 – Jan 2022 · Little Rock, AR</span>
+					</div>
+					<ul class="exp-bullets">
+						<li>Developed and maintained <strong>C#/.NET backend services</strong> and SQL Server database schemas for an international martial arts education platform supporting 130,000+ active users.</li>
+						<li>Engineered responsive instructor and student portal interfaces using React and modern JavaScript.</li>
+						<li>Implemented secure remote video testing workflows to preserve school operations and rank testing during COVID-19.</li>
+					</ul>
+				</article>
+
+				<!-- Arkansas Democrat-Gazette -->
+				<article class="exp-item">
+					<div class="exp-header">
+						<div>
+							<h3 class="exp-role">Digital Tech Support Specialist</h3>
+							<h4 class="exp-company">Arkansas Democrat-Gazette</h4>
+						</div>
+						<span class="exp-date">2018 – 2020 · Little Rock, AR</span>
+					</div>
+					<ul class="exp-bullets">
+						<li>Supported state-wide digital subscriber rollouts, diagnosing account access, mobile hardware integration, and digital publication delivery issues.</li>
+					</ul>
+				</article>
+			</div>
+		</section>
+
+		<!-- Education & Certifications -->
+		<section class="resume-section">
+			<h2 class="section-title">
+				<span>Education & Certifications</span>
+				<span class="title-line"></span>
+			</h2>
+			<div class="edu-grid">
+				<div class="edu-item">
+					<h3 class="edu-degree">Bachelor of Science — Software Engineering</h3>
+					<p class="edu-school">Western Governors University</p>
+				</div>
+				<div class="edu-item">
+					<h3 class="edu-degree">AWS Certified Cloud Practitioner</h3>
+					<p class="edu-school">Amazon Web Services (AWS)</p>
+				</div>
+			</div>
+		</section>
+	</div>
+</Base>
+
+<style>
+	.resume-container {
+		max-width: 860px;
+		margin: 0 auto;
+		padding: 3rem 1.5rem 6rem;
+	}
+
+	.resume-topbar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 2.5rem;
+	}
+
+	.back-link {
+		font-size: 0.875rem;
+		color: var(--color-muted);
+		text-decoration: none;
+		font-weight: 500;
+	}
+
+	.back-link:hover {
+		color: var(--color-brand);
+	}
+
+	.download-btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.5rem 1rem;
+		background: var(--color-surface);
+		border: 1px solid var(--color-brand);
+		color: var(--color-brand);
+		font-size: 0.8125rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		text-decoration: none;
+		border-radius: 6px;
+		transition: all 150ms ease;
+	}
+
+	.download-btn:hover {
+		background: var(--color-brand);
+		color: white;
+	}
+
+	.resume-header {
+		border-bottom: 1px solid var(--color-border);
+		padding-bottom: 2rem;
+		margin-bottom: 3rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.candidate-name {
+		font-family: var(--font-heading);
+		font-size: clamp(2.5rem, 5vw, 4rem);
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: -0.03em;
+		margin: 0 0 0.25rem 0;
+		color: var(--color-text);
+	}
+
+	.candidate-title {
+		font-size: 1.125rem;
+		color: var(--color-brand);
+		font-weight: 600;
+		margin: 0;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.live-indicator {
+		width: 8px;
+		height: 8px;
+		background: var(--color-brand);
+		border-radius: 50%;
+		display: inline-block;
+	}
+
+	.contact-meta {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.75rem;
+		font-size: 0.875rem;
+		color: var(--color-muted);
+	}
+
+	.contact-meta a {
+		color: var(--color-text);
+		text-decoration: none;
+	}
+
+	.contact-meta a:hover {
+		color: var(--color-brand);
+	}
+
+	/* Sections */
+	.resume-section {
+		margin-bottom: 3rem;
+	}
+
+	.section-title {
+		font-family: var(--font-heading);
+		font-size: 1.125rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		color: var(--color-brand);
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		margin: 0 0 1.5rem 0;
+	}
+
+	.title-line {
+		flex: 1;
+		height: 1px;
+		background: var(--color-border);
+	}
+
+	.summary-text {
+		font-size: 1rem;
+		line-height: 1.7;
+		color: var(--color-muted);
+		margin: 0;
+	}
+
+	/* Skills */
+	.skills-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+		gap: 1.5rem;
+	}
+
+	.skill-group {
+		background: var(--color-surface);
+		border: 1px solid var(--color-border);
+		padding: 1.25rem;
+		border-radius: 6px;
+	}
+
+	.skill-heading {
+		font-size: 0.8125rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		color: var(--color-text);
+		margin: 0 0 0.5rem 0;
+	}
+
+	.skill-list {
+		font-size: 0.875rem;
+		line-height: 1.5;
+		color: var(--color-muted);
+		margin: 0;
+	}
+
+	/* Experience */
+	.experience-list {
+		display: flex;
+		flex-direction: column;
+		gap: 2.25rem;
+	}
+
+	.exp-item {
+		border-left: 2px solid var(--color-border);
+		padding-left: 1.5rem;
+		position: relative;
+	}
+
+	.exp-item::before {
+		content: "";
+		position: absolute;
+		left: -6px;
+		top: 4px;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background: var(--color-brand);
+	}
+
+	.exp-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin-bottom: 0.75rem;
+	}
+
+	.exp-role {
+		font-size: 1.125rem;
+		font-weight: 700;
+		color: var(--color-text);
+		margin: 0;
+	}
+
+	.exp-company {
+		font-size: 0.9375rem;
+		color: var(--color-brand);
+		font-weight: 500;
+		margin: 0.2rem 0 0 0;
+	}
+
+	.exp-date {
+		font-size: 0.8125rem;
+		color: var(--color-muted);
+		font-family: monospace;
+	}
+
+	.exp-bullets {
+		margin: 0;
+		padding-left: 1.25rem;
+		color: var(--color-muted);
+		font-size: 0.9375rem;
+		line-height: 1.6;
+		display: flex;
+		flex-direction: column;
+		gap: 0.4rem;
+	}
+
+	.exp-bullets li strong {
+		color: var(--color-text);
+	}
+
+	/* Education */
+	.edu-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+		gap: 1.5rem;
+	}
+
+	.edu-item {
+		background: var(--color-surface);
+		border: 1px solid var(--color-border);
+		padding: 1.25rem;
+		border-radius: 6px;
+	}
+
+	.edu-degree {
+		font-size: 0.9375rem;
+		font-weight: 700;
+		color: var(--color-text);
+		margin: 0 0 0.35rem 0;
+	}
+
+	.edu-school {
+		font-size: 0.875rem;
+		color: var(--color-muted);
+		margin: 0;
+	}
+</style>
