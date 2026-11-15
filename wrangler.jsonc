@@ -1,0 +1,21 @@
+{
+	"$schema": "./node_modules/wrangler/config-schema.json",
+	"compatibility_date": "2026-11-10",
+	"compatibility_flags": ["nodejs_compat"],
+	"name": "cgstewart",
+	"main": "@astrojs/cloudflare/entrypoints/server",
+	"assets": {
+		"directory": "./dist",
+		"binding": "ASSETS"
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "cgstewart-db",
+			"database_id": "1fa8fb35-806f-4fc4-880a-0cddb67d279f"
+		}
+	],
+	"observability": {
+		"enabled": true
+	}
+}

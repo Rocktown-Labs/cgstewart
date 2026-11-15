@@ -1,10 +1,8 @@
 import type { APIRoute } from "astro";
-import { DatabaseSync } from "node:sqlite";
-import path from "node:path";
 
 export const prerender = false;
 
-export const POST: APIRoute = async ({ request }) => {
+export const POST: APIRoute = async ({ request, locals }) => {
 	try {
 		const body = await request.json();
 		const { name, email, phone } = body;
@@ -25,24 +23,41 @@ export const POST: APIRoute = async ({ request }) => {
 			);
 		}
 
-		const dbPath = path.resolve(process.cwd(), "data.db");
-		const db = new DatabaseSync(dbPath);
-
-		db.exec(`
-			CREATE TABLE IF NOT EXISTS resume_requests (
-				id TEXT PRIMARY KEY,
-				name TEXT,
-				email TEXT NOT NULL,
-				phone TEXT NOT NULL,
-				created_at TEXT DEFAULT (datetime('now'))
-			);
-		`);
-
 		const id = `req_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
-		const stmt = db.prepare(
-			"INSERT INTO resume_requests (id, name, email, phone) VALUES (?, ?, ?, ?)"
-		);
-		stmt.run(id, name?.trim() || null, email.trim(), phone.trim());
+		const cleanName = name?.trim() || null;
+		const cleanEmail = email.trim();
+		const cleanPhone = phone.trim();
+
+		// Check if running on Cloudflare with D1 binding
+		const env = (locals as any)?.runtime?.env;
+		if (env?.DB) {
+			await env.DB.prepare(
+				"INSERT INTO resume_requests (id, name, email, phone) VALUES (?, ?, ?, ?)"
+			)
+				.bind(id, cleanName, cleanEmail, cleanPhone)
+				.run();
+		} else {
+			// Local Node.js development fallback
+			const { DatabaseSync } = await import("node:sqlite");
+			const path = await import("node:path");
+			const dbPath = path.resolve(process.cwd(), "data.db");
+			const db = new DatabaseSync(dbPath);
+
+			db.exec(`
+				CREATE TABLE IF NOT EXISTS resume_requests (
+					id TEXT PRIMARY KEY,
+					name TEXT,
+					email TEXT NOT NULL,
+					phone TEXT NOT NULL,
+					created_at TEXT DEFAULT (datetime('now'))
+				);
+			`);
+
+			const stmt = db.prepare(
+				"INSERT INTO resume_requests (id, name, email, phone) VALUES (?, ?, ?, ?)"
+			);
+			stmt.run(id, cleanName, cleanEmail, cleanPhone);
+		}
 
 		return new Response(
 			JSON.stringify({
