@@ -58,7 +58,7 @@ const PROJECT_TAGS: Record<string, string[]> = {
 const tags = PROJECT_TAGS[project.slug] || (project.taxonomies?.tag || []).map((t: string) => t.toUpperCase());
 ---
 
-<Base title={`${project.data.title} — cgstewart.dev`}>
+<Base title={`${project.data.title} · cgstewart.dev`}>
 	<div class="project-detail-page">
 		<nav class="back-nav">
 			<a href="/work" class="back-link">
