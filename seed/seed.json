@@ -329,7 +329,7 @@
           "year": "2026",
           "summary": "AI-powered calendar automation tool converting photos, PDFs, and text into calendar (.ics) events for people and agents.",
           "github_repo": "Rocktown-Labs/quickcal-cf",
-          "live_url": "https://www.quickcalai.com",
+          "live_url": "https://quickcalai.com",
           "featured": true,
           "content": [
             {
@@ -646,7 +646,7 @@
           "year": "2026",
           "summary": "Modern sweets commerce platform built on TanStack Start + Cloudflare D1 with Shippo USPS shipping and outbox email pipelines.",
           "github_repo": "Rocktown-Labs/sweettreats",
-          "live_url": "https://sweettreats.shop",
+          "live_url": "https://sweettreatslr.com",
           "featured": true,
           "content": [
             {
@@ -686,7 +686,7 @@
           "year": "2026",
           "summary": "Luxury consignment operations platform with staff role-based access, consignment intake loop, and inventory workflows.",
           "github_repo": "Rocktown-Labs/reluxury",
-          "live_url": "https://reluxury.app",
+          "live_url": "https://reluxury.shop",
           "featured": false,
           "content": [
             {

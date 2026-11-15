@@ -6,6 +6,11 @@ const targetDir = "/Users/newrgm/dev/RocktownLabs/projects/cgstewart/public/imag
 
 const sites = [
 	{
+		slug: "gigstax",
+		altSlug: null,
+		url: "https://gigstax.com",
+	},
+	{
 		slug: "sweettreats",
 		altSlug: "sweet-treats",
 		url: "https://sweettreatslr.com",
@@ -18,7 +23,7 @@ const sites = [
 	{
 		slug: "quickcalai",
 		altSlug: null,
-		url: "https://www.quickcalai.com",
+		url: "https://quickcalai.com",
 	},
 	{
 		slug: "soundkit",
