@@ -862,6 +862,17 @@
         }
       },
       {
+        "id": "hono",
+        "slug": "hono",
+        "status": "published",
+        "data": {
+          "name": "Hono",
+          "category": "Languages & Frameworks",
+          "icon": "Hono",
+          "order": 6
+        }
+      },
+      {
         "id": "python",
         "slug": "python",
         "status": "published",
@@ -869,7 +880,7 @@
           "name": "Python",
           "category": "Languages & Frameworks",
           "icon": "Python",
-          "order": 6
+          "order": 7
         }
       },
       {
@@ -880,7 +891,7 @@
           "name": "Node.js",
           "category": "Languages & Frameworks",
           "icon": "Nodejs",
-          "order": 7
+          "order": 8
         }
       },
       {
@@ -888,10 +899,10 @@
         "slug": "cloudflare",
         "status": "published",
         "data": {
-          "name": "Cloudflare (Workers, D1, R2, Queues)",
+          "name": "Cloudflare",
           "category": "Cloud & Infrastructure",
           "icon": "Cloudflare",
-          "order": 10
+          "order": 9
         }
       },
       {
@@ -902,7 +913,7 @@
           "name": "Alchemy",
           "category": "Cloud & Infrastructure",
           "icon": "Code",
-          "order": 11
+          "order": 10
         }
       },
       {
@@ -910,10 +921,10 @@
         "slug": "aws",
         "status": "published",
         "data": {
-          "name": "AWS (Lambda, CloudFront, S3, ECS)",
+          "name": "AWS",
           "category": "Cloud & Infrastructure",
           "icon": "AmazonWebServicesDark",
-          "order": 12
+          "order": 11
         }
       },
       {
@@ -924,7 +935,7 @@
           "name": "Docker",
           "category": "Cloud & Infrastructure",
           "icon": "Docker",
-          "order": 13
+          "order": 12
         }
       },
       {
@@ -935,7 +946,7 @@
           "name": "Vercel",
           "category": "Cloud & Infrastructure",
           "icon": "VercelDark",
-          "order": 14
+          "order": 13
         }
       },
       {
@@ -943,10 +954,10 @@
         "slug": "d1",
         "status": "published",
         "data": {
-          "name": "Cloudflare D1 (SQLite)",
+          "name": "Cloudflare D1",
           "category": "Databases",
           "icon": "SQLite",
-          "order": 20
+          "order": 14
         }
       },
       {
@@ -954,10 +965,10 @@
         "slug": "postgresql",
         "status": "published",
         "data": {
-          "name": "PostgreSQL (Neon, PlanetScale, Hyperdrive)",
+          "name": "Postgres",
           "category": "Databases",
           "icon": "PostgreSQL",
-          "order": 21
+          "order": 15
         }
       },
       {
@@ -968,7 +979,7 @@
           "name": "Redis",
           "category": "Databases",
           "icon": "Redis",
-          "order": 22
+          "order": 16
         }
       },
       {
@@ -979,7 +990,7 @@
           "name": "Convex",
           "category": "Databases",
           "icon": "Convex",
-          "order": 23
+          "order": 17
         }
       },
       {
@@ -987,10 +998,10 @@
         "slug": "cursor",
         "status": "published",
         "data": {
-          "name": "Cursor & Codex",
+          "name": "Cursor",
           "category": "AI & Engineering Tools",
           "icon": "Code",
-          "order": 30
+          "order": 18
         }
       },
       {
@@ -1001,7 +1012,7 @@
           "name": "PostHog",
           "category": "AI & Engineering Tools",
           "icon": "PostHog",
-          "order": 31
+          "order": 19
         }
       },
       {
@@ -1012,7 +1023,7 @@
           "name": "Sentry",
           "category": "AI & Engineering Tools",
           "icon": "Sentry",
-          "order": 32
+          "order": 20
         }
       },
       {
@@ -1023,7 +1034,7 @@
           "name": "TanStack Query",
           "category": "AI & Engineering Tools",
           "icon": "TanStack",
-          "order": 33
+          "order": 21
         }
       },
       {
@@ -1034,7 +1045,7 @@
           "name": "Zod",
           "category": "AI & Engineering Tools",
           "icon": "Zod",
-          "order": 34
+          "order": 22
         }
       },
       {
@@ -1042,10 +1053,10 @@
         "slug": "stripe",
         "status": "published",
         "data": {
-          "name": "Stripe (Connect, Webhooks, Checkout)",
+          "name": "Stripe",
           "category": "AI & Engineering Tools",
           "icon": "Stripe",
-          "order": 35
+          "order": 23
         }
       }
     ]

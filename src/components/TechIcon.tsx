@@ -55,6 +55,9 @@ export default function TechIcon({ name = "", icon = "", className = "", size = 
 	if (n.includes("node")) {
 		return <svgl.Nodejs width={size} height={size} className={className} />;
 	}
+	if (n.includes("hono")) {
+		return <svgl.Hono width={size} height={size} className={className} />;
+	}
 	if (n.includes("workers") || n.includes("cloudflare")) {
 		return <svgl.CloudflareWorkers width={size} height={size} className={className} />;
 	}

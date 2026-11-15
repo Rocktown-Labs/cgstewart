@@ -47,16 +47,10 @@ const featuredProjects = projects.filter(p => p.data.featured).slice(0, 6);
 
 			<div class="hero-bio">
 				<p>
-					I design, build, deploy, and operate production software end to end. Through my studio, 
-					<strong class="text-white font-medium">Rocktown Labs</strong>, I operate consumer products, 
-					multi-agent AI pipelines, and edge-native architectures on Cloudflare and AWS.
+					I design, build, deploy, and operate production software end to end. Through my studio, <strong class="studio-highlight">Rocktown Labs</strong>, I operate consumer products, multi-agent AI pipelines, and edge-native architectures on Cloudflare and AWS.
 				</p>
 				<p>
-					Currently building and architecting with 
-					<span class="highlight-badge">TypeScript</span>, 
-					<span class="highlight-badge">C# / .NET</span>, 
-					<span class="highlight-badge">Cloudflare Workers & D1</span>, and 
-					<span class="highlight-badge">Alchemy</span>.
+					Currently building and architecting with <span class="tech-highlight">TypeScript</span>, <span class="tech-highlight">React</span>, <span class="tech-highlight">Node.js</span>, and <span class="tech-highlight">Hono</span>, while getting reacquainted with <span class="tech-highlight">C#</span> and <span class="tech-highlight">.NET</span>.
 				</p>
 			</div>
 
@@ -289,18 +283,14 @@ const featuredProjects = projects.filter(p => p.data.featured).slice(0, 6);
 		margin-bottom: 2.25rem;
 	}
 
-	.text-white {
+	.studio-highlight {
 		color: var(--color-text);
+		font-weight: 600;
 	}
 
-	.highlight-badge {
-		display: inline-block;
-		padding: 0.15rem 0.5rem;
-		border-radius: 4px;
-		background: color-mix(in srgb, var(--color-brand) 12%, transparent);
+	.tech-highlight {
 		color: var(--color-brand);
-		font-weight: 600;
-		font-size: 0.95em;
+		font-weight: 500;
 	}
 
 	.hero-links {
