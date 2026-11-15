@@ -36,13 +36,13 @@ I wanted three specific things for the new version:
 
 Here is how the old Next.js and Convex site looked:
 
-![Old Portfolio Homepage](/images/writing/old-portfolio.jpg)
+![Old Portfolio Homepage](/images/writing/old-portfolio.png)
 
-*The previous Next.js portfolio: minimal and dark, but backed by a heavier client architecture.*
+*The previous Next.js portfolio: minimal and dark, but backed by a heavier client architecture with Convex WebSockets.*
 
 And here is the new EmDash and Astro implementation:
 
-![New Portfolio Homepage](/images/writing/new-portfolio.jpg)
+![New Portfolio Homepage](/images/writing/new-portfolio.png)
 
 *The new EmDash site: sharper typography, streamlined Tech Arsenal, and live screenshots for all twelve projects.*
 
