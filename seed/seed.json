@@ -266,7 +266,9 @@
           ],
           "featured_image": {
             "url": "/images/projects/soundkit.png",
-            "alt": "SoundKit Hero Screenshot"
+            "alt": "SoundKit Hero Screenshot",
+            "src": "/images/projects/soundkit.png",
+            "provider": "external"
           }
         },
         "taxonomies": {
@@ -307,7 +309,9 @@
           ],
           "featured_image": {
             "url": "/images/projects/big-brain-shelf.png",
-            "alt": "Big Brain Shelf Hero Screenshot"
+            "alt": "Big Brain Shelf Hero Screenshot",
+            "src": "/images/projects/big-brain-shelf.png",
+            "provider": "external"
           }
         },
         "taxonomies": {
@@ -347,7 +351,9 @@
           ],
           "featured_image": {
             "url": "/images/projects/quickcalai.png",
-            "alt": "QuickCalAI Hero Screenshot"
+            "alt": "QuickCalAI Hero Screenshot",
+            "src": "/images/projects/quickcalai.png",
+            "provider": "external"
           }
         },
         "taxonomies": {
@@ -387,7 +393,9 @@
           ],
           "featured_image": {
             "url": "/images/projects/gigstax.png",
-            "alt": "GigStax Hero Screenshot"
+            "alt": "GigStax Hero Screenshot",
+            "src": "/images/projects/gigstax.png",
+            "provider": "external"
           }
         },
         "taxonomies": {
@@ -427,7 +435,9 @@
           ],
           "featured_image": {
             "url": "/images/projects/rallycasts.png",
-            "alt": "RallyCasts Hero Screenshot"
+            "alt": "RallyCasts Hero Screenshot",
+            "src": "/images/projects/rallycasts.png",
+            "provider": "external"
           }
         },
         "taxonomies": {
@@ -467,7 +477,9 @@
           ],
           "featured_image": {
             "url": "/images/projects/parlaypal.png",
-            "alt": "ParlayPal Hero Screenshot"
+            "alt": "ParlayPal Hero Screenshot",
+            "src": "/images/projects/parlaypal.png",
+            "provider": "external"
           }
         },
         "taxonomies": {
@@ -507,7 +519,9 @@
           ],
           "featured_image": {
             "url": "/images/projects/bigspella.png",
-            "alt": "BigSpella Hero Screenshot"
+            "alt": "BigSpella Hero Screenshot",
+            "src": "/images/projects/bigspella.png",
+            "provider": "external"
           }
         },
         "taxonomies": {
@@ -546,7 +560,9 @@
           ],
           "featured_image": {
             "url": "/images/projects/castlecare.png",
-            "alt": "CastleCare Hero Screenshot"
+            "alt": "CastleCare Hero Screenshot",
+            "src": "/images/projects/castlecare.png",
+            "provider": "external"
           }
         },
         "taxonomies": {
@@ -585,7 +601,9 @@
           ],
           "featured_image": {
             "url": "/images/projects/deadpartymedia.png",
-            "alt": "Dead Party Media Hero Screenshot"
+            "alt": "Dead Party Media Hero Screenshot",
+            "src": "/images/projects/deadpartymedia.png",
+            "provider": "external"
           }
         },
         "taxonomies": {
@@ -625,7 +643,9 @@
           ],
           "featured_image": {
             "url": "/images/projects/rivercitymd.png",
-            "alt": "River City Mobile Detailing Hero Screenshot"
+            "alt": "River City Mobile Detailing Hero Screenshot",
+            "src": "/images/projects/rivercitymd.png",
+            "provider": "external"
           }
         },
         "taxonomies": {
@@ -664,7 +684,9 @@
           ],
           "featured_image": {
             "url": "/images/projects/sweettreats.png",
-            "alt": "Sweet Treats Hero Screenshot"
+            "alt": "Sweet Treats Hero Screenshot",
+            "src": "/images/projects/sweettreats.png",
+            "provider": "external"
           }
         },
         "taxonomies": {
@@ -704,7 +726,9 @@
           ],
           "featured_image": {
             "url": "/images/projects/reluxury.png",
-            "alt": "ReLuxury Hero Screenshot"
+            "alt": "ReLuxury Hero Screenshot",
+            "src": "/images/projects/reluxury.png",
+            "provider": "external"
           }
         },
         "taxonomies": {

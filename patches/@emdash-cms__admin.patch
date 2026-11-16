@@ -1,0 +1,25 @@
+diff --git a/dist/convert-DruzetkA.js b/dist/convert-DruzetkA.js
+index 571147ee3453cc13f8f0cafdec604c2857a49ed9..939ea84bb9dbf42427939fa000c333f750a03ffd 100644
+--- a/dist/convert-DruzetkA.js
++++ b/dist/convert-DruzetkA.js
+@@ -158,6 +158,7 @@ const INTERNAL_MEDIA_PREFIX = "/_emdash/api/media/file/";
+ * Neither is a valid storage key.
+ */
+ function localMediaFileUrl(key) {
++	if (!key || typeof key !== "string") return "";
+ 	const segments = key.split("/");
+ 	if (segments.some((segment) => segment === "" || segment === "." || segment === "..")) return `${INTERNAL_MEDIA_PREFIX}${encodeURIComponent(key)}`;
+ 	return `${INTERNAL_MEDIA_PREFIX}${segments.map(encodeURIComponent).join("/")}`;
+diff --git a/dist/index.js b/dist/index.js
+index b79d35978ba0dd3159214aa1aa6deae6dc47f5ad..55ad2d9cdd2e329a0e4cd6ca277be6a001733d28 100644
+--- a/dist/index.js
++++ b/dist/index.js
+@@ -15185,7 +15185,7 @@ function mediaDisplayUrl(value) {
+ 	if (typeof value === "string") return value;
+ 	if (!value) return void 0;
+ 	if (value.previewUrl || value.src) return value.previewUrl || value.src;
+-	if (!value.provider || value.provider === "local") return localMediaFileUrl(typeof value.meta?.storageKey === "string" ? value.meta.storageKey : value.id);
++	if (!value.provider || value.provider === "local") { const k = typeof value.meta?.storageKey === "string" ? value.meta.storageKey : value.id; return k ? localMediaFileUrl(k) : (value.url || void 0); }
+ }
+ function mediaItemToImageFieldValue(item) {
+ 	const provider = canonicalMediaProviderId(item.provider);
