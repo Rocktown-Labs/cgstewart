@@ -28,10 +28,28 @@ export const POST: APIRoute = async ({ request, locals }) => {
 		const cleanEmail = email.trim();
 		const cleanPhone = phone.trim();
 
-		// Check if running on Cloudflare with D1 binding
-		const env = (locals as any)?.runtime?.env;
-		if (env?.DB) {
-			await env.DB.prepare(
+		// Check if running on Cloudflare Workers
+		let cfEnv: any = null;
+		try {
+			// @ts-ignore
+			const cf = await import("cloudflare:workers");
+			cfEnv = cf.env;
+		} catch {
+			// Running in Node.js
+		}
+
+		if (cfEnv?.DB) {
+			await cfEnv.DB.prepare(`
+				CREATE TABLE IF NOT EXISTS resume_requests (
+					id TEXT PRIMARY KEY,
+					name TEXT,
+					email TEXT NOT NULL,
+					phone TEXT NOT NULL,
+					created_at TEXT DEFAULT (datetime('now'))
+				);
+			`).run();
+
+			await cfEnv.DB.prepare(
 				"INSERT INTO resume_requests (id, name, email, phone) VALUES (?, ?, ?, ?)"
 			)
 				.bind(id, cleanName, cleanEmail, cleanPhone)
@@ -69,7 +87,7 @@ export const POST: APIRoute = async ({ request, locals }) => {
 	} catch (err: any) {
 		console.error("Resume request error:", err);
 		return new Response(
-			JSON.stringify({ error: "Failed to process request." }),
+			JSON.stringify({ error: err?.message || String(err) }),
 			{ status: 500, headers: { "Content-Type": "application/json" } }
 		);
 	}
