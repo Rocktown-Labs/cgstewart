@@ -8,6 +8,16 @@
 		"directory": "./dist",
 		"binding": "ASSETS"
 	},
+	"routes": [
+		{
+			"pattern": "cgstewart.dev",
+			"custom_domain": true
+		},
+		{
+			"pattern": "www.cgstewart.dev",
+			"custom_domain": true
+		}
+	],
 	"d1_databases": [
 		{
 			"binding": "DB",
