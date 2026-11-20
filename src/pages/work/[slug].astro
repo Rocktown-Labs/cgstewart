@@ -278,6 +278,7 @@ const tags = PROJECT_TAGS[project.slug] || (project.taxonomies?.tag || []).map((
 		color: var(--color-text);
 		line-height: 1.75;
 		font-size: 1.0625rem;
+		overflow-wrap: anywhere;
 	}
 
 	.markdown-body :global(h1),
@@ -429,5 +430,19 @@ const tags = PROJECT_TAGS[project.slug] || (project.taxonomies?.tag || []).map((
 	.btn-bottom-live:hover {
 		opacity: 0.92;
 		box-shadow: 0 0 20px color-mix(in srgb, var(--color-brand) 35%, transparent);
+	}
+
+	@media (max-width: 640px) {
+		.project-detail-page {
+			padding: 1.75rem 1.125rem 3.5rem;
+		}
+
+		.project-hero-shot-wrap {
+			margin-bottom: 1.75rem;
+		}
+
+		.project-title {
+			font-size: clamp(2rem, 8vw, 2.75rem);
+		}
 	}
 </style>

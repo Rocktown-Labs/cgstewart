@@ -268,6 +268,7 @@ const featuredProjects = projects.filter(p => p.data.featured).slice(0, 6);
 		height: 2px;
 		background: var(--color-brand);
 		display: inline-block;
+		flex-shrink: 0;
 	}
 
 	.hero-bio {
@@ -357,7 +358,7 @@ const featuredProjects = projects.filter(p => p.data.featured).slice(0, 6);
 
 	.arsenal-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
 		gap: 2rem;
 	}
 
@@ -428,7 +429,7 @@ const featuredProjects = projects.filter(p => p.data.featured).slice(0, 6);
 
 	.projects-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
 		gap: 1.5rem;
 	}
 
@@ -547,6 +548,7 @@ const featuredProjects = projects.filter(p => p.data.featured).slice(0, 6);
 
 	.project-links {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
 		gap: 0.75rem;
 		border-top: 1px solid var(--color-border);
@@ -665,10 +667,35 @@ const featuredProjects = projects.filter(p => p.data.featured).slice(0, 6);
 	}
 
 	@media (max-width: 640px) {
+		.hero-section {
+			padding: 2.5rem 1.125rem 2.5rem;
+		}
+
+		.hero-role {
+			font-size: 0.9375rem;
+			margin-bottom: 1.5rem;
+		}
+
+		.hero-bio {
+			font-size: 1rem;
+			margin-bottom: 1.75rem;
+		}
+
+		.arsenal-section,
+		.work-section,
+		.writing-section {
+			padding: 2.75rem 1.125rem;
+		}
+
+		.section-heading-wrap {
+			margin-bottom: 1.75rem;
+		}
+
 		.post-row {
 			flex-direction: column;
 			align-items: flex-start;
 			gap: 0.5rem;
+			padding: 1.125rem;
 		}
 
 		.post-arrow {

@@ -73,7 +73,7 @@ const isLoggedIn = Boolean(Astro.locals.user);
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 		<title>{fullTitle}</title>
 		<EmDashHead page={pageCtx} />
 		<Font cssVariable="--font-heading" preload />
@@ -192,6 +192,42 @@ const isLoggedIn = Boolean(Astro.locals.user);
 				</div>
 			</div>
 		</footer>
+
+		<nav class="mobile-bottom-nav" aria-label="Mobile Navigation">
+			<a href="/" class={`mobile-tab-link ${Astro.url.pathname === "/" ? "active" : ""}`}>
+				<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+					<path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+					<circle cx="12" cy="7" r="4"></circle>
+				</svg>
+				<span>About</span>
+			</a>
+			<a href="/work" class={`mobile-tab-link ${Astro.url.pathname.startsWith("/work") ? "active" : ""}`}>
+				<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+					<rect width="7" height="7" x="3" y="3" rx="1"></rect>
+					<rect width="7" height="7" x="14" y="3" rx="1"></rect>
+					<rect width="7" height="7" x="14" y="14" rx="1"></rect>
+					<rect width="7" height="7" x="3" y="14" rx="1"></rect>
+				</svg>
+				<span>Work</span>
+			</a>
+			<a href="/writing" class={`mobile-tab-link ${Astro.url.pathname.startsWith("/writing") ? "active" : ""}`}>
+				<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+					<path d="M12 20h9"></path>
+					<path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"></path>
+				</svg>
+				<span>Writing</span>
+			</a>
+			<a href="/resume" class={`mobile-tab-link ${Astro.url.pathname.startsWith("/resume") ? "active" : ""}`}>
+				<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+					<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
+					<path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+					<path d="M10 9H8"></path>
+					<path d="M16 13H8"></path>
+					<path d="M16 17H8"></path>
+				</svg>
+				<span>Resume</span>
+			</a>
+		</nav>
 		<EmDashBodyEnd page={pageCtx} />
 
 		<script>
@@ -278,6 +314,8 @@ const isLoggedIn = Boolean(Astro.locals.user);
 
 				html {
 					scroll-behavior: smooth;
+					overflow-x: clip;
+					max-width: 100%;
 				}
 
 				body {
@@ -288,6 +326,8 @@ const isLoggedIn = Boolean(Astro.locals.user);
 					background: var(--color-bg);
 					-webkit-font-smoothing: antialiased;
 					min-height: 100vh;
+					overflow-x: clip;
+					max-width: 100%;
 				}
 
 				a {
@@ -324,55 +364,8 @@ const isLoggedIn = Boolean(Astro.locals.user);
 		</style>
 
 		<style>
-			.site-header {
-				max-width: var(--wide-width);
-				margin: 0 auto;
-				padding: var(--spacing-xl) var(--spacing-lg);
-			}
-
-			.nav {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-			}
-
-			.site-title {
-				font-family: var(--font-heading);
-				font-size: var(--font-size-lg);
-				font-weight: 600;
-				text-decoration: none;
-				letter-spacing: var(--tracking-tight);
-			}
-
-			.site-logo-img {
-				height: 48px;
-				width: auto;
-				display: block;
-				margin: -8px 0;
-			}
-
-			.nav-links {
-				display: flex;
-				gap: var(--spacing-xl);
-				font-size: var(--font-size-sm);
-			}
-
-			.nav-links a {
-				text-decoration: none;
-				color: var(--color-muted);
-				transition: color var(--transition-fast);
-			}
-
-			.nav-links a:hover {
-				color: var(--color-text);
-			}
-
-			.nav-links a:empty {
-				display: none;
-			}
-
 			.nav-admin {
-				opacity: 0.5;
+				opacity: 0.75;
 			}
 
 			main {
@@ -460,16 +453,9 @@ const isLoggedIn = Boolean(Astro.locals.user);
 				text-decoration: underline;
 			}
 
-			@media (max-width: 640px) {
-				.nav {
-					flex-direction: column;
-					gap: var(--spacing-md);
-					align-items: center;
-				}
-
-				.nav-links {
-					flex-wrap: wrap;
-					justify-content: center;
+			@media (max-width: 767px) {
+				.site-footer {
+					padding: var(--spacing-2xl) 1.125rem calc(5.5rem + env(safe-area-inset-bottom, 0px));
 				}
 
 				.footer-content {

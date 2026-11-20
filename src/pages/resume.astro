@@ -303,6 +303,8 @@ import Base from "../layouts/Base.astro";
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		flex-wrap: wrap;
+		gap: 0.75rem;
 		margin-bottom: 2.5rem;
 	}
 
@@ -518,7 +520,7 @@ import Base from "../layouts/Base.astro";
 	/* Education */
 	.edu-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
 		gap: 1.5rem;
 	}
 
@@ -708,5 +710,29 @@ import Base from "../layouts/Base.astro";
 		color: var(--color-muted);
 		text-align: center;
 		margin: 0.25rem 0 0 0;
+	}
+
+	@media (max-width: 640px) {
+		.resume-container {
+			padding: 2rem 1.125rem 3.5rem;
+		}
+
+		.resume-topbar {
+			margin-bottom: 1.75rem;
+		}
+
+		.skills-list {
+			padding: 1.125rem;
+		}
+
+		.exp-item {
+			padding-left: 1.125rem;
+		}
+
+		.modal-card {
+			padding: 1.5rem;
+			max-height: 90dvh;
+			overflow-y: auto;
+		}
 	}
 </style>

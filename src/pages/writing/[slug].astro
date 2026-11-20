@@ -144,6 +144,7 @@ if (typeof post.data.content === "string") {
 		font-size: 1.0625rem;
 		line-height: 1.8;
 		color: var(--color-text);
+		overflow-wrap: anywhere;
 	}
 
 	/* Markdown typography */
@@ -239,5 +240,16 @@ if (typeof post.data.content === "string") {
 		color: var(--color-brand);
 		text-decoration: underline;
 		text-underline-offset: 4px;
+	}
+
+	@media (max-width: 640px) {
+		.post-detail-page {
+			padding: 1.75rem 1.125rem 3.5rem;
+		}
+
+		.post-header {
+			padding-bottom: 1.75rem;
+			margin-bottom: 2rem;
+		}
 	}
 </style>
