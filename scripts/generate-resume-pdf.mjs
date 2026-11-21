@@ -247,9 +247,22 @@ const htmlContent = `<!DOCTYPE html>
   <div class="exp-item">
     <div class="exp-header">
       <div class="exp-role-co">
+        <span class="exp-role">Realtor &amp; Software Automation Developer</span> &mdash; <span class="exp-company">Fathom Realty</span>
+      </div>
+      <span class="exp-date">Aug 2021 &ndash; Jan 2023 &bull; Contract</span>
+    </div>
+    <ul class="bullets">
+      <li>Built custom lead-generation scrapers and data aggregation pipelines for real estate data across AR, MO, and LA.</li>
+      <li>Constructed internal recruiting dashboards using Next.js and React, automating broker outreach and prospect management.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-header">
+      <div class="exp-role-co">
         <span class="exp-role">Web Developer &amp; Software Administrator</span> &mdash; <span class="exp-company">ATA International</span>
       </div>
-      <span class="exp-date">Oct 2020 &ndash; Jan 2022 &bull; Little Rock, AR</span>
+      <span class="exp-date">Oct 2020 &ndash; Jul 2021 &bull; Little Rock, AR</span>
     </div>
     <ul class="bullets">
       <li>Developed and maintained <strong>C#/.NET backend services</strong> and SQL Server database schemas for an international platform supporting 130,000+ active users.</li>
@@ -261,13 +274,26 @@ const htmlContent = `<!DOCTYPE html>
   <div class="exp-item">
     <div class="exp-header">
       <div class="exp-role-co">
-        <span class="exp-role">Realtor &amp; Software Automation Developer</span> &mdash; <span class="exp-company">Fathom Realty</span>
+        <span class="exp-role">Digital Tech Support Specialist</span> &mdash; <span class="exp-company">Arkansas Democrat-Gazette</span>
       </div>
-      <span class="exp-date">Aug 2021 &ndash; Jan 2023 &bull; Contract</span>
+      <span class="exp-date">Dec 2018 &ndash; Jan 2020 &bull; Little Rock, AR</span>
     </div>
     <ul class="bullets">
-      <li>Built custom lead-generation scrapers and data aggregation pipelines for real estate data across AR, MO, and LA.</li>
-      <li>Constructed internal recruiting dashboards using Next.js and React, automating broker outreach and prospect management.</li>
+      <li>Provided phone and in-person technical support for 3,000+ customers, diagnosing hardware, software, and connectivity issues with a 95% satisfaction rating.</li>
+      <li>Led technical setup and support for a 40-person call center, standardizing troubleshooting docs and reducing average resolution time by 30%.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-header">
+      <div class="exp-role-co">
+        <span class="exp-role">Web Developer</span> &mdash; <span class="exp-company">Design Group Marketing</span>
+      </div>
+      <span class="exp-date">Apr 2019 &ndash; Oct 2019 &bull; Little Rock, AR (Contract)</span>
+    </div>
+    <ul class="bullets">
+      <li>Built React, WordPress, HTML/CSS, and JavaScript websites and mockups for marketing-firm clients across multiple industries.</li>
+      <li>Collaborated hand-in-hand with designers and the marketing team to deliver client campaigns and maintain 10+ client web properties.</li>
     </ul>
   </div>
 </section>
