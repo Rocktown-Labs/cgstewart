@@ -170,11 +170,11 @@ const htmlContent = `<!DOCTYPE html>
   <div class="contact">
     <span>Searcy, AR</span>
     <span class="sep">&bull;</span>
-    <a href="mailto:cg@rocktownlabs.com">cg@rocktownlabs.com</a>
+    <a href="tel:501-827-1551">501-827-1551</a>
+    <span class="sep">&bull;</span>
+    <a href="mailto:camstewart7@gmail.com">camstewart7@gmail.com</a>
     <span class="sep">&bull;</span>
     <a href="https://cgstewart.dev">cgstewart.dev</a>
-    <span class="sep">&bull;</span>
-    <a href="https://github.com/cgRGM">github.com/cgRGM</a>
     <span class="sep">&bull;</span>
     <a href="https://linkedin.com/in/camgstewart">linkedin.com/in/camgstewart</a>
   </div>
@@ -269,18 +269,6 @@ const htmlContent = `<!DOCTYPE html>
       <li>Built custom lead-generation scrapers and data aggregation pipelines for real estate data across AR, MO, and LA.</li>
       <li>Constructed internal recruiting dashboards using Next.js and React, automating broker outreach and prospect management.</li>
     </ul>
-  </div>
-</section>
-
-<section class="section" style="margin-bottom: 0;">
-  <h2 class="section-title">Education &amp; Certifications</h2>
-  <div class="edu-row">
-    <div>
-      <span class="edu-deg">Bachelor of Science &mdash; Software Engineering</span>, <span class="edu-inst">Western Governors University</span>
-    </div>
-    <div>
-      <span class="edu-deg">AWS Certified Cloud Practitioner</span>, <span class="edu-inst">Amazon Web Services</span>
-    </div>
   </div>
 </section>
 
